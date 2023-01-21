@@ -49,3 +49,6 @@ fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/" + add_my
 fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
 # print data int tablesheet
 streamlit.write('Thanks for adding ', add_my_fruit)
+
+my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')"); 
+
