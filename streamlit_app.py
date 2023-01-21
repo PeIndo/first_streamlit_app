@@ -48,6 +48,6 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add ?','Kiwi')
 fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
 # streamlit.text(fruityvice_response2.json())
 # format json response 
-fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
+fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json().name)
 # print data int tablesheet
 streamlit.write('Thanks for adding ', fruityvice_normalized2)
